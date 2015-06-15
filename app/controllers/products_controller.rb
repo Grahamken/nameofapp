@@ -71,4 +71,9 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url)
     end
+
+    # lesson 32
+    def prodcut_params
+      params.require(:product).permit(:name, :description, :image_url, :colour)
+    end
 end
