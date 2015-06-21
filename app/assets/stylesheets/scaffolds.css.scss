@@ -67,3 +67,24 @@ div {
     list-style: square;
   }
 }
+
+
+.carousel-control {
+  top:50%;
+  width:auto;
+  height:1em;
+  background:transparent;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right  {
+  position:static;
+  display:block;
+  width:auto;
+}
+.carousel-control .glyphicon-chevron-left:before {
+  margin-left: 0;
+}
+
+.carousel-inner>.item>img {
+    margin: auto auto;
+    vertical-align: middle;
+ }
