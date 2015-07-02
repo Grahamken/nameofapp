@@ -16,6 +16,9 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <h1>Welcome to bike Berlin</h1>
 <h2>Your source for used bikes in berlin</h2>
 <h3>Dynamic links</h3>
@@ -24,15 +27,27 @@
 <%= link_to "Products", products_path %>
 <%= link_to "About", static_pages_about_path %>
 <%= link_to "Contact", static_pages_contact_path %>
+
 <h3>Not Dynamic links</h3>
 <a href="/">Landing Page</a>
 <a href="/static_pages/index">Index</a>
 <a href="/products">Products</a>
 <a href="/orders/index">Orders</a>
+
 <%= form_tag("/products", method: "get") do %>
 	<%= label_tag(:q, "Search for:") %>
 	<%= text_field_tag(:q) %>
 	<%= submit_tag("search") %>
+
+	<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
 <% end %>
 
 
