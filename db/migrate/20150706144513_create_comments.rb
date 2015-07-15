@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.references :user, index: true
       t.text :body
-      t.interger :rating
+      t.integer :rating
       t.references :product, index: true
       t.timestamps
     end
