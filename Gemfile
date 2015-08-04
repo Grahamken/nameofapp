@@ -53,4 +53,6 @@ group :production do
 	gem 'pg'
 end
 
+#Factory_girl
+gem "factory_girl_rails", "~> 4.0"
 
