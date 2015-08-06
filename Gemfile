@@ -59,3 +59,6 @@ end
 #Factory_girl
 gem "factory_girl_rails", "~> 4.0"
 
+#Stripe
+ gem 'stripe'
+
