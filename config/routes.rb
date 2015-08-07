@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   
   resources :orders, only: [:index, :show, :new, :create]
+  resources :payments, only: [:create]
 
   get 'static_pages/about'
 
