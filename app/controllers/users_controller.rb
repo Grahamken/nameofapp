@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     if current_user
-      redirect_to edit_user_path
+      params[:id] = current_user.id
+      redirect_to edit_user_path(params[:id])
     end
   end
 

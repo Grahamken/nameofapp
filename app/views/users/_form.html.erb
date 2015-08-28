@@ -19,6 +19,15 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
+  <div class="field">
+    <%= f.label :admin %><br>
+    <%= f.select :admin, [['True', true], ['False', false]] %>
+    <%= f.select :author,
+    User.all.map { |u| [u.name, u.id] },
+               { include_blank: true },
+               { class: 'chosen-select' }
+    %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
