@@ -12,10 +12,15 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
+    <% cache cache_key_for_products do %>
+      All available products:
+      <% @products.each do |product| %>
+      <% cache(p) do %>
       <tr>
         <%= render product %>
-    <% end %>
+    <%end%>
+    <%end%>
+    <%end%>
   </tbody>
 </table>
 

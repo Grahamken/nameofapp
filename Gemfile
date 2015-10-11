@@ -67,3 +67,5 @@ gem "factory_girl_rails", "~> 4.0"
 
  gem 'chosen-rails'
 
+ #caching
+gem 'dalli'
