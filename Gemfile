@@ -69,3 +69,5 @@ gem "factory_girl_rails", "~> 4.0"
 
  #caching
 gem 'dalli'
+
+gem 'redis-rails'
